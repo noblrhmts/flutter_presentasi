@@ -11,4 +11,5 @@
 
 - Halaman Riwayat
   
-  ![image](https://github.com/user-attachments/assets/8439cfdd-b408-4ed8-baec-93ef2a00d305)
+  ![image](https://github.com/user-attachments/assets/c1eb09fe-8183-48fc-ad92-f434e096e037)
+
