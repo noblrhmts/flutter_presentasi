@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class AttendanceProvider with ChangeNotifier {
-  // Daftar siswa sebagai Map
-  List<Map<String, dynamic>> students = [
+class ProviderKehadiran with ChangeNotifier {
+  // Daftar siswa
+  List<Map<String, dynamic>> siswas = [
     {'name': 'Ali', 'isPresent': false},
     {'name': 'Budi', 'isPresent': false},
     {'name': 'Citra', 'isPresent': false},
@@ -10,27 +10,27 @@ class AttendanceProvider with ChangeNotifier {
   ];
 
   // Riwayat kehadiran
-  List<Map<String, dynamic>> attendanceHistory = [];
+  List<Map<String, dynamic>> historyKehadiran = [];
 
-  void toggleAttendance(int index) {
-    students[index]['isPresent'] = !students[index]['isPresent'];
+  void toggleKehadiran(int index) {
+    siswas[index]['isPresent'] = !siswas[index]['isPresent'];
     notifyListeners();
   }
 
-  void saveAttendance() {
-    final presentCount = students.where((s) => s['isPresent'] == true).length;
-    final absentCount = students.length - presentCount;
+  void saveKehadiran() {
+    final presentCount = siswas.where((s) => s['isPresent'] == true).length;
+    final absentCount = siswas.length - presentCount;
 
     // Simpan ke riwayat
-    attendanceHistory.insert(0, {
+    historyKehadiran.insert(0, {
       'date': DateTime.now(),
       'present': presentCount,
       'absent': absentCount,
     });
 
     // Reset status kehadiran
-    for (var student in students) {
-      student['isPresent'] = false;
+    for (var siswa in siswas) {
+      siswa['isPresent'] = false;
     }
     notifyListeners();
   }

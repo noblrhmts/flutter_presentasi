@@ -7,22 +7,22 @@ import 'package:flutter_presentasi/screens/screen_history.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (_) => AttendanceProvider(),
+      create: (_) => ProviderKehadiran(),
       child: MaterialApp(
-        home: MainScreen(),
+        home: LayarUtama(),
       ),
     ),
   );
 }
 
-class MainScreen extends StatefulWidget {
+class LayarUtama extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _StateLayarUtama createState() => _StateLayarUtama();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _StateLayarUtama extends State<LayarUtama> {
   int _selectedIndex = 0;
-  final _screens = [AttendanceScreen(), HistoryScreen()];
+  final _screens = [ScreenKehadiran(), ScreenHistory()];
 
   @override
   Widget build(BuildContext context) {

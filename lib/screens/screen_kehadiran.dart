@@ -3,13 +3,13 @@ import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_presentasi/providers/provider_kehadiran.dart';
 
-class AttendanceScreen extends StatelessWidget {
+class ScreenKehadiran extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<AttendanceProvider>(context);
+    final provider = Provider.of<ProviderKehadiran>(context);
 
     // Format tanggal saat ini
-    final currentDate = DateFormat('dd MMM yyyy').format(DateTime.now());
+    final tanggal = DateFormat('dd MMM yyyy').format(DateTime.now());
 
     return Scaffold(
       appBar: AppBar(title: Text('Presensi Siswa'),
@@ -19,14 +19,14 @@ class AttendanceScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: provider.students.length,
+              itemCount: provider.siswas.length,
               itemBuilder: (context, index) {
-                final student = provider.students[index];
+                final student = provider.siswas[index];
                 return ListTile(
                   title: Text(student['name']),
                   trailing: Checkbox(
                     value: student['isPresent'],
-                    onChanged: (_) => provider.toggleAttendance(index),
+                    onChanged: (_) => provider.toggleKehadiran(index),
                   ),
                 );
               },
@@ -38,11 +38,11 @@ class AttendanceScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  currentDate,
+                  tanggal,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 ElevatedButton(
-                  onPressed: provider.students.isEmpty ? null : provider.saveAttendance,
+                  onPressed: provider.siswas.isEmpty ? null : provider.saveKehadiran,
                   child: Text('Simpan Kehadiran'),
                 ),
               ],

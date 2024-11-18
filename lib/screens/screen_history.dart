@@ -3,19 +3,19 @@ import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_presentasi/providers/provider_kehadiran.dart';
 
-class HistoryScreen extends StatelessWidget {
+class ScreenHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<AttendanceProvider>(context);
+    final provider = Provider.of<ProviderKehadiran>(context);
 
     return Scaffold(
       appBar: AppBar(title: Text('Riwayat Kehadiran'),
       backgroundColor: Colors.black,
       foregroundColor: Colors.white,),
       body: ListView.builder(
-        itemCount: provider.attendanceHistory.length,
+        itemCount: provider.historyKehadiran.length,
         itemBuilder: (context, index) {
-          final history = provider.attendanceHistory[index];
+          final history = provider.historyKehadiran[index];
           final date = DateFormat('dd MMM yyyy').format(history['date']);
           return ListTile(
             title: Text(date),
