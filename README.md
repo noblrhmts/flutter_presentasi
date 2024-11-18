@@ -1,16 +1,14 @@
-# flutter_presentasi
+**Nama: Nobel Rahmat Sani**
 
-A new Flutter project.
+**Kelas: 2A TRPL**
 
-## Getting Started
+**NIM: 362358302075**
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+- Halaman Pencatatan
+  
+  ![image](https://github.com/user-attachments/assets/586b77ca-90b0-470c-9b86-609819986b6e)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Halaman Riwayat
+  
+  ![image](https://github.com/user-attachments/assets/8439cfdd-b408-4ed8-baec-93ef2a00d305)
