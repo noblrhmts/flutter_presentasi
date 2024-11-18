@@ -7,9 +7,10 @@
 
 - Halaman Pencatatan
   
-  ![image](https://github.com/user-attachments/assets/586b77ca-90b0-470c-9b86-609819986b6e)
+  ![image](https://github.com/user-attachments/assets/09f52bd4-970c-4dd3-84a9-600fc30cf2cf)
+
 
 - Halaman Riwayat
   
-  ![image](https://github.com/user-attachments/assets/c1eb09fe-8183-48fc-ad92-f434e096e037)
+  ![image](https://github.com/user-attachments/assets/0c9e5ac8-ea8a-4b02-b8fb-ba91f2986219)
 
